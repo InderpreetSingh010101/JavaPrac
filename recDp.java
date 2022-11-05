@@ -39,14 +39,26 @@ public class recDp{
         return dp[N] ;
     }
 
+    public static int fiboOptimization(int N){
+        
+        int a = 0 , b = 1 ;
+         int sum = 0 ;
+        for(int i = 2 ; i<=N ; i++){
+          sum =  a + b ;
+          a = b ;
+          b = sum ;
+        }
+        return b ;
+    }
+
      public static void main(String[] args) {
 
-        int  n = 8 ;
+        int  n = 6 ;
         int[] dp = new int[n] ;
-		int ans =fibotabulation( n-1 , dp) ;
-        display(dp) ;
+		// int ans =fibotabulation( n-1 , dp) ;
+        // display(dp) ;
 
-        System.out.println() ;
-        System.out.print(ans) ;
+        // System.out.println() ;
+        System.out.print(fiboOptimization(n)) ;
 	}
 }
