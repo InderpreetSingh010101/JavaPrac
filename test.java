@@ -1,8 +1,12 @@
+import java.util.*;
 public class test{
 
 	
  
   public static void main(String[] args) {
-		System.out.println("This is the output");
+
+	     String s = "AbcD" ;
+		 char c = s.charAt(0) ;
+		System.out.println(Character.isUpperCase(s.charAt(2))); 
 	}
 }
