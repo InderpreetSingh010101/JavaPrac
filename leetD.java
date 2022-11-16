@@ -25,6 +25,32 @@ public class leetD{
        return ans.trim() ;
         
     }
+
+      //374. Guess Number Higher or Lower     16 Nov 22
+
+    public class Solution extends GuessGame {
+    public int guessNumber(int n) {
+        int beg = 1 ;
+        int end = n ;
+      
+        
+        while(beg < end ){
+        
+         int mid = beg + (end - beg)/2;  //int x = (int)((n + s) / 2);
+           
+        
+            if(guess(mid) == 0){
+                return mid ;
+            }else if(guess(mid) == 1){
+                beg = mid+1 ;
+            }else{
+                end = mid ; // remb
+            }
+        
+        }
+        return beg ; // remb for [1] test case
+     }
+}
    
     public static void main(String[] args) {
 

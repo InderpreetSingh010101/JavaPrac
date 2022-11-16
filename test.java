@@ -7,6 +7,9 @@ public class test{
 
 	     String s = "AbcD" ;
 		 char c = s.charAt(0) ;
-		System.out.println(Character.isUpperCase(s.charAt(2))); 
+		// System.out.println(Character.isUpperCase(s.charAt(2)));
+		Stack<Integer> st = new Stack<>() ; 
+		st.push(1) ;
+		System.out.println(st.pop()) ;
 	}
 }
