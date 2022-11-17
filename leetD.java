@@ -50,7 +50,26 @@ public class leetD{
         }
         return beg ; // remb for [1] test case
      }
-}
+    }
+
+     // 17 Nov 22 223. Rectangle Area
+     public int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {
+        int recOne = (ax2 - ax1) * (ay2 - ay1) ;
+        int recTwo = (bx2 - bx1) * (by2 - by1) ;
+        
+        int cx1 = Math.max(ax1 , bx1) ;
+        int cy1 = Math.max(ay1 , by1) ;
+        
+        int cx2 = Math.min(ax2 , bx2) ;
+        int cy2 = Math.min(ay2 , by2) ;
+        int cl = cx2 - cx1 ;
+        int cb = cy2 - cy1 ;
+        int cArea = 0;
+        if(cl > 0 && cb > 0){
+            cArea = cl * cb ;
+        }
+        return recOne + recTwo - cArea ;
+     }
    
     public static void main(String[] args) {
 
